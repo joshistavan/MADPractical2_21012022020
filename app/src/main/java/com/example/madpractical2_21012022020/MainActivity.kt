@@ -1,4 +1,4 @@
-package com.example.madpractical2_21012022022
+package com.example.madpractical2_21012022020
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,10 +19,11 @@ class MainActivity : AppCompatActivity() {
         Snackbar.make(mycl,"onCreate: function called", Snackbar.LENGTH_LONG).show()
     }
     override fun onStart() {
-        super.onStart()
         Log.i(TAG, "onStart: function called")
         Toast.makeText(this,"onStart: function called",Toast.LENGTH_LONG).show()
         Snackbar.make(mycl,"onStart: function called", Snackbar.LENGTH_LONG).show()
+        super.onStart()
+
     }
 
     override fun onRestart() {
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         Log.i(TAG, "onPause: function called")
         Toast.makeText(this,"onPause: function called",Toast.LENGTH_LONG).show()
-        Snackbar.make(mycl,"onPause: function called", Snackbar.LENGTH_LONG).show()
+        Snackbar.make(mycl,"onPause: function called", Snackbar.LENGTH_LONG).setDuration(10000)
     }
 
     override fun onStop() {
